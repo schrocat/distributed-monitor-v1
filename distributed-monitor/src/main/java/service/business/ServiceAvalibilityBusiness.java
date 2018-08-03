@@ -27,6 +27,8 @@ public class ServiceAvalibilityBusiness{
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally{
+			dbhelper.close();
 		}
 		return list;
 	}
