@@ -4,15 +4,13 @@ import java.util.List;
 
 public class ListObject extends AbstractJsonObject {
 
-	private List<?> items;
+	private List<?> values;
 
-	public List<?> getItems() {
-		return items;
+	public List<?> getValues() {
+		return values;
 	}
 
-	public void setItems(List<?> items) {
-		this.items = items;
+	public void setValues(List<?> values) {
+		this.values = values;
 	}
-	
-
 }

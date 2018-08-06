@@ -19,7 +19,7 @@ public class ServiceAvaliabilityAction {
 	public void getAviliableService(HttpServletRequest request,HttpServletResponse response){
 		List<Serviceprovider> list = new ServiceAvaliabilityServiceImpl().getAviliableService();
 		ListObject listObject = new ListObject();
-		listObject.setItems(list);
+		listObject.setValues(list);
 		listObject.setCode(StatusCode.CODE_SUCCESS);
 		listObject.setMsg("SUCCESS");
 		ResponseUtils.renderJson(response, JackJsonUtils.toJson(listObject));

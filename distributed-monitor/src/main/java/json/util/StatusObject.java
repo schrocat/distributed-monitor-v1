@@ -3,9 +3,7 @@ package json.util;
 public class StatusObject {
 
 	private String code;
-	private String msg;
-	
-
+	private String msg;	
 	
 	public StatusObject(String code,String msg) {
 		// 
@@ -34,6 +32,4 @@ public class StatusObject {
 		this.msg = msg;
 	}
 	
-	
-
 }
