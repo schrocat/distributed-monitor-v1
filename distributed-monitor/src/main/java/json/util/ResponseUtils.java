@@ -16,6 +16,7 @@ public class ResponseUtils {
 		response.setCharacterEncoding("utf-8");
 		response.setHeader("Pragma", "No-cache");
 		response.setHeader("Cache-Control", "no-cache");
+		response.setHeader("Access-Control-Allow-Origin", "*");
 		response.setDateHeader("Expires", 0);
 		try {
 			response.getWriter().write(text);

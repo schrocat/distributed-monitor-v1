@@ -17,7 +17,8 @@ public class MonitorToolAction {
 		type = Integer.parseInt(request.getParameter("type"));
 		switch(type){
 		case 1:
-			new ServiceAvaliabilityAction().getAviliableService(request, response);
+			int timeType = Integer.parseInt(request.getParameter("timeType"));
+			new GetBusinessCountAction().getBusinessCount(request, response, timeType);
 			break;
 		case 2:
 			new GetSendWayAction().getSendWay(response, request);
@@ -28,6 +29,9 @@ public class MonitorToolAction {
 		case 4:
 		case 5:
 			new BusinessRateAction().getBusinessRateService(response, request, type);
+			break;
+		case 6:
+			new ServiceUseAction().getUsableService(request, response);
 			break;
 		default:
 			new ErrorAction().getError(request, response);
