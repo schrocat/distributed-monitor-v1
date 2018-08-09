@@ -7,6 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import excel.util.TestExcel;
+
 
 @Controller
 public class MonitorToolAction {
@@ -38,6 +40,8 @@ public class MonitorToolAction {
 		}
 	}
 	
-
-
+	@RequestMapping(value="/export", method=RequestMethod.GET)
+	public void exportExcel(HttpServletRequest request,HttpServletResponse response){
+//		new TestExcel().test(request, response);
+	}
 }
